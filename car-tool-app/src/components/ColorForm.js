@@ -22,7 +22,7 @@ export const ColorForm = ({ buttonText, onSubmitColor }) => {
     setColorForm({
       color: '', hexcode: '',
     });
-  }
+  };
 
   return <form>
     <div>
