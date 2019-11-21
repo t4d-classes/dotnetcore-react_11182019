@@ -1,6 +1,6 @@
 Exercise 6
 
-1. Move the list of colors to its own component. Think about how you could make very reusable.
+1. Move the unordered list of colors in the Color Tool component to its own component. Think about how you could make very reusable.
 
 2. Update the Color Form component to use the useForm hook we created at the end of yesterday.
 

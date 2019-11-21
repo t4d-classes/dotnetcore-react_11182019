@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import { ToolHeader } from './ToolHeader';
 import { ColorForm } from './ColorForm';
+import { UnorderedList } from './UnorderedList';
 
 // Array.prototype.map = function(transformFn) {
 //   const newArray = [];
@@ -22,9 +23,7 @@ export const ColorTool = ({ colors: initialColors }) => {
 
   return <>
     <ToolHeader headerText="Color Tool" />
-    <ul>
-      {colors.map(color => <li key={color}>{color}</li>)}
-    </ul>
+    <UnorderedList items={colors} />
     <ColorForm buttonText="Add Color" onSubmitColor={addColor} />
   </>;
 
