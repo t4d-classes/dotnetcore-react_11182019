@@ -1,0 +1,16 @@
+Exercise 1
+
+1. Create a new component named Car Tool in the components folder.
+
+2. In the Car Tool component, display the following header structure:
+
+<header>
+  {/* I am a comment */}
+  <h1>Car Tool</h1>
+</header>
+
+3. Import Car Tool component into the index.js file.
+
+4. Display the Car Tool component beneath the Hello World component.
+
+5. Ensure it works.

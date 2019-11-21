@@ -1,0 +1,9 @@
+Exercise 2
+
+1. Create a table of cars in Car Tool component. Please use the HTML table and related element to create the table. The table will have the following columns:
+
+Id, Make, Model, Year, Color, Price
+
+2. Please display two rows of car data. Hard code the table do not use any form of dynamic programming.
+
+3. Ensure it works.

@@ -1,0 +1,10 @@
+Exercise 6
+
+1. Move the unordered list of colors in the Color Tool component to its own component. Think about how you could make very reusable.
+
+2. Update the Color Form component to use the useForm hook we created at the end of yesterday.
+
+3. Move the Car Form to its own component. If the Car Form is not using the useForm hook, please update it to do so.
+
+4. Ensure it works. Bon chance!
+

@@ -1,0 +1,9 @@
+Exercise 4
+
+1. Add a form to the Car Tool. Add field for make, model, year, color and price.
+
+2. Ensure the data is collect in the state by outputing the state data to the console.
+
+3. Ensure it works.
+
+Bonus: Solve world hunger and solve world peace.

@@ -1,14 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+
+import { all as allCars } from '../services/carsData';
 
 import { ToolHeader } from './ToolHeader';
 import { CarTable } from './CarTable';
 import { CarForm } from './CarForm';
 
-export const CarTool = ({ cars: initialCars, headerText }) => {
+export const CarTool = ({ headerText }) => {
 
-  const [ cars, setCars ] = useState(initialCars.concat());
+  const [ cars, setCars ] = useState([]);
   const [ editCarId, setEditCarId ] = useState(-1);
+
+  useEffect(() => {
+
+    allCars().then(cars => setCars(cars));
+
+  }, [setCars]);
 
   const addCar = (car) => {
     setCars(cars.concat({

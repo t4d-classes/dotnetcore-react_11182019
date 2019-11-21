@@ -1,0 +1,11 @@
+Exercise 8
+
+1. Add a new column to the Car Table with a column header of Actions.
+
+2. In the Car View Row component, add a new button labeled "Edit". When the "Edit" button is clicked, change the component for that one car row from Car View Row to Car Edit Row.
+
+Only one row is editable a time.
+
+3. Create a new component named Car Edit Row. Car Edit Row should display a car table row with edit fields for make, model, year, color, and price. The fields should be populated with car data for that row. In the actions column in Car Edit Row, display two buttons: Save and Cancel. Do not implement the Save and Cancel buttons.
+
+4. Ensure it works.
