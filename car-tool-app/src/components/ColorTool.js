@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ToolHeader } from './ToolHeader';
 
 // Array.prototype.map = function(transformFn) {
 //   const newArray = [];
@@ -43,9 +44,7 @@ export const ColorTool = ({ colors: initialColors }) => {
   };
 
   return <>
-    <header>
-      <h1>Color Tool</h1>
-    </header>
+    <ToolHeader headerText="Color Tool" />
     <ul>
       {colors.map(color => <li key={color}>{color}</li>)}
     </ul>

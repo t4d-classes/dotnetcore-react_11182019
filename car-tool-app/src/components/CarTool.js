@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { useForm } from '../hooks/useForm';
+import { ToolHeader } from '../components/ToolHeader';
+import { CarTable } from '../components/CarTable';
 
 export const CarTool = ({ headerText, cars: initialCars }) => {
 
@@ -21,31 +23,8 @@ export const CarTool = ({ headerText, cars: initialCars }) => {
   };
 
   return <>
-    <header>
-      <h1>{headerText}</h1>
-    </header>
-    <table>
-      <thead>
-        <tr>
-          <th>Id</th>
-          <th>Make</th>
-          <th>Model</th>
-          <th>Year</th>
-          <th>Color</th>
-          <th>Price</th>
-        </tr>
-      </thead>
-      <tbody>
-        {cars.map(car => <tr key={car.id}>
-          <td>{car.id}</td>
-          <td>{car.make}</td>
-          <td>{car.model}</td>
-          <td>{car.year}</td>
-          <td>{car.color}</td>
-          <td>{car.price}</td>
-        </tr>)}
-      </tbody>
-    </table>
+    <ToolHeader headerText={headerText} />
+    <CarTable cars={cars} />
     <form>
       <div>
         <label htmlFor="make-input">Make:</label>
