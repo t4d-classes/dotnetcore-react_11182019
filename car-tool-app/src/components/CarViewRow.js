@@ -1,6 +1,10 @@
 import React from 'react';
 
-export const CarViewRow = ({ car }) => {
+export const CarViewRow = ({ car, onEditCar }) => {
+
+  const editCar = () => {
+    onEditCar(car.id);
+  };
 
   return <tr>
     <td>{car.id}</td>
@@ -9,6 +13,9 @@ export const CarViewRow = ({ car }) => {
     <td>{car.year}</td>
     <td>{car.color}</td>
     <td>{car.price}</td>
+    <td>
+      <button type="button" onClick={editCar}>Edit</button>
+    </td>
   </tr>;
 
 };

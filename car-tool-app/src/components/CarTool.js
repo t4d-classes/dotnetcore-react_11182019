@@ -8,6 +8,7 @@ import { CarForm } from './CarForm';
 export const CarTool = ({ cars: initialCars, headerText }) => {
 
   const [ cars, setCars ] = useState(initialCars.concat());
+  const [ editCarId, setEditCarId ] = useState(-1);
 
   const addCar = (car) => {
 
@@ -19,7 +20,8 @@ export const CarTool = ({ cars: initialCars, headerText }) => {
 
   return <>
     <ToolHeader headerText={headerText} />
-    <CarTable cars={cars} />
+    <CarTable cars={cars} editCarId={editCarId}
+      onEditCar={setEditCarId} />
     <CarForm buttonText="Add Car"
       onSubmitCar={addCar} />
   </>;
