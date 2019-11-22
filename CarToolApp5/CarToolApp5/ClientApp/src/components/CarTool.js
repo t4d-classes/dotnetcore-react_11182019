@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-import { all as allCars } from '../services/carsData';
+import {
+  all as allCars,
+  append as appendCar,
+} from '../services/carsData';
 
 import { ToolHeader } from './ToolHeader';
 import { CarTable } from './CarTable';
@@ -19,10 +22,14 @@ export const CarTool = ({ headerText }) => {
   }, [setCars]);
 
   const addCar = (car) => {
-    setCars(cars.concat({
-      ...car,
-      id: Math.max(...cars.map(c => c.id), 0) + 1,
-    }));
+    //setCars(cars.concat({
+    //  ...car,
+    //  id: Math.max(...cars.map(c => c.id), 0) + 1,
+    //}));
+
+    appendCar(car)
+      .then(() => allCars())
+      .then(cars => setCars(cars));
   };
 
   const saveCar = (car) => {

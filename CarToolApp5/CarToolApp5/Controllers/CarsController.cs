@@ -22,9 +22,21 @@ namespace CarToolApp5.Controllers
       }
 
       [HttpGet()]
-      public async Task<IEnumerable<CarModel>> All()
+      public async Task<IActionResult> All()
       {
-        return await _carsData.All();
+
+        return Ok(await _carsData.All());
+      }
+
+      [HttpPost]
+      public async Task<IActionResult> Append([FromBody] CarModel car)
+      {
+        if (!ModelState.IsValid)
+        {
+          return BadRequest();
+        }
+
+        return new ObjectResult(await _carsData.Append(car));
       }
     }
 }
